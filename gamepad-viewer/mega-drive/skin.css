@@ -10,6 +10,7 @@
 /* Positioning and size of the container for the face buttons */
 
 .custom .triggers,
+.custom .bumpers,
 .custom .start,
 .custom .abxy{
     background: url(svg/6button-buttons.svg); 
@@ -35,22 +36,22 @@ z-index: 1;
 }
 
 .custom .a.pressed{
-background: url(svg/6button-buttons-a.svg);
+background: url(svg/6button-buttons-c.svg);
 }
 .custom .b.pressed{
 background: url(svg/6button-buttons-b.svg);
 }
-.custom .trigger.right {
-background: url(svg/6button-buttons-c.svg);
+.custom .bumper.right.pressed {
+background: url(svg/6button-buttons-z.svg);
 }
 .custom .x.pressed{
-background: url(svg/6button-buttons-x.svg);
+background: url(svg/6button-buttons-a.svg);
 }
 .custom .y.pressed{
 background: url(svg/6button-buttons-y.svg);
 }
-.custom .trigger.left {
-background: url(svg/6button-buttons-z.svg);
+.custom .bumper.left.pressed {
+background: url(svg/6button-buttons-x.svg);
 }
 /*
 .custom .bumper.right.pressed {
