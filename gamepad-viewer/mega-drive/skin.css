@@ -47,7 +47,7 @@ background: url(svg/6button-buttons-z.svg);
 .custom .x.pressed{
 background: url(svg/6button-buttons-a.svg);
 }
-.custom .y.pressed{
+.custom .trigger.left{
 background: url(svg/6button-buttons-y.svg);
 }
 .custom .bumper.left.pressed {
