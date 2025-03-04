@@ -113,7 +113,6 @@ body { background-color: rgba(0, 0, 0, 0); margin: 0px auto; overflow: hidden; }
     width: 150px;
     height: 150px;
     background: none;
-    filter: hue-rotate(3deg) saturate(1.3) brightness(0.95);
 }
 
 .fight-stick .abxy {
@@ -236,6 +235,7 @@ body { background-color: rgba(0, 0, 0, 0); margin: 0px auto; overflow: hidden; }
     width: 220px;
     height: 220px;
     background: var(--fstick-source-image);
+    filter: hue-rotate(180deg) saturate(1.2) brightness(1.2);
 }
 
 .fight-stick .fstick.up {

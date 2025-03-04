@@ -3,7 +3,7 @@
 body { background-color: rgba(0, 0, 0, 0); margin: 0px auto; overflow: hidden; }
 
 :root {
-    --fstick-source-image: url(https://imgur.com/Cdxibvo.png);
+    --fstick-source-image: url(joystick.png);
 
     --a-top: 230px;
     --b-top: calc(var(--a-top) - var(--diag-vert-clearance));
@@ -42,14 +42,13 @@ body { background-color: rgba(0, 0, 0, 0); margin: 0px auto; overflow: hidden; }
     background: transparent;
     height: 535px;
     width: 575px;
-    filter: hue-rotate(-3deg) saturate(1.3) brightness(0.8);
 }
 
 .fight-stick.disconnected {
     margin:auto;
     width:50%;
     height:50%;
-    background: url(https://imgur.com/oDdTc1t.png) no-repeat;
+    background: url(disconnected.png) no-repeat;
 }
 
 /* start/back */
@@ -236,6 +235,7 @@ body { background-color: rgba(0, 0, 0, 0); margin: 0px auto; overflow: hidden; }
     width: 220px;
     height: 220px;
     background: var(--fstick-source-image);
+    filter: hue-rotate(170deg) saturate(1.5) brightness(1.5);
 }
 
 .fight-stick .fstick.up {
