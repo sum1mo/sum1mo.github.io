@@ -1,0 +1,265 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
+
+body { background-color: rgba(0, 0, 0, 0); margin: 0px auto; overflow: hidden; }
+
+:root {
+    --fstick-source-image: url(https://imgur.com/Cdxibvo.png);
+
+    --a-top: 230px;
+    --b-top: calc(var(--a-top) - var(--diag-vert-clearance));
+    --x-top: calc(var(--a-top) - var(--vert-clearance));
+    --y-top: calc(var(--x-top) - var(--diag-vert-clearance));
+    --rb-top: var(--y-top);
+    --lb-top: var(--rb-top);
+    --rt-top: calc(var(--rb-top) - 183px + var(--vert-clearance));
+    --lt-top: var(--rt-top);
+
+    --a-left: 0px;
+    --b-left: calc(var(--a-left) + var(--diag-horz-clearance));
+    --x-left: var(--a-left);
+    --y-left: calc(var(--a-left) + var(--diag-horz-clearance));
+    --rb-left: calc(var(--y-left) + var(--horz-clearance));
+    --lb-left: calc(var(--rb-left) + var(--horz-clearance));
+    --rt-left: calc(var(--rb-left) + 31px);
+    --lt-left: calc(var(--rt-left) + var(--horz-clearance));
+
+    --dir-right-top: calc(var(--x-top) + 62px + 75px);
+    --dir-right-left: calc(var(--x-left) + 472px - 150px);
+    --dir-down-top: calc(var(--dir-right-top) - var(--diag-vert-clearance));
+    --dir-down-left: calc(var(--dir-right-left) - var(--diag-horz-clearance));
+    --dir-left-top: var(--dir-down-top);
+    --dir-left-left: calc(var(--dir-down-left) - var(--horz-clearance));
+    --dir-up-top: calc(var(--dir-right-top) + 230px);
+    --dir-up-left: calc(var(--dir-right-left) + 75px);
+
+    --vert-clearance: 160px;
+    --diag-vert-clearance: 80px;
+    --diag-horz-clearance: 140px;
+    --horz-clearance: var(--vert-clearance);
+}
+
+.controller.fight-stick {
+    background: transparent;
+    height: 535px;
+    width: 575px;
+}
+
+.fight-stick.disconnected {
+    margin:auto;
+    width:50%;
+    height:50%;
+    background: url(https://imgur.com/oDdTc1t.png) no-repeat;
+}
+
+/* start/back */
+
+.fight-stick .back, .fight-stick .start {
+    width: 100px;
+    height: 50px;
+    top: 0px;
+    display: block;
+    border-radius: 25px;
+    border: 1px solid black; /* Increased border thickness */
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    text-align: center;
+    line-height: 50px; /* Vertically center the text */
+    color: black; /* Default text color */
+    text-transform: uppercase;
+    font-size: 18px; /* Size for the text */
+}
+
+.fight-stick .back {
+    background: 
+        url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="100" height="50" viewBox="0 0 100 50"%3E%3Crect width="100" height="50" rx="25" fill="rgb(165, 162, 162)" stroke="black" stroke-width="3"/%3E%3Ctext x="50" y="25" text-anchor="middle" fill="rgb(13, 12, 12)" font-size="18" font-family="Source Code Pro, monospace" font-weight="700" dy="0.35em">SELECT</text>%3C/svg%3E') no-repeat center center;
+    background-size: cover;
+    position: absolute;
+    left: 5px;
+}
+
+.fight-stick .start {
+    background: 
+        url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="100" height="50" viewBox="0 0 100 50"%3E%3Crect width="100" height="50" rx="25" fill="rgb(165, 162, 162)" stroke="black" stroke-width="3"/%3E%3Ctext x="50" y="25" text-anchor="middle" fill="rgb(13, 12, 12)" font-size="18" font-family="Source Code Pro, monospace" font-weight="700" dy="0.35em">START</text>%3C/svg%3E') no-repeat center center;
+    background-size: cover;
+    position: absolute;
+    left: 113px;
+}
+
+.fight-stick .back.pressed, .fight-stick .start.pressed {
+    transform: translateY(0px);
+    background-position: 0px 100px;
+    -webkit-filter: brightness(100%) invert(0);
+}
+
+.fight-stick .back.pressed {
+    background: 
+        url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="100" height="50" viewBox="0 0 100 50"%3E%3Crect width="100" height="50" rx="25" fill="rgb(229, 229, 229)" stroke="black" stroke-width="3"/%3E%3Ctext x="50" y="25" text-anchor="middle" fill="rgb(221, 32, 32)" font-size="18" font-family="Source Code Pro, monospace" font-weight="700" dy="0.35em">SELECT</text>%3C/svg%3E') no-repeat center center;
+    background-size: cover;
+}
+
+.fight-stick .start.pressed {
+    background: 
+        url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="100" height="50" viewBox="0 0 100 50"%3E%3Crect width="100" height="50" rx="25" fill="rgb(229, 229, 229)" stroke="black" stroke-width="3"/%3E%3Ctext x="50" y="25" text-anchor="middle" fill="rgb(221, 32, 32)" font-size="18" font-family="Source Code Pro, monospace" font-weight="700" dy="0.35em">START</text>%3C/svg%3E') no-repeat center center;
+    background-size: cover;
+}
+
+/* Face buttons */
+
+.fight-stick .button {
+    width: 150px;
+    height: 150px;
+}
+
+.fight-stick .abxy {
+    left: 280px;
+}
+
+.fight-stick .a {
+    display: none;
+}
+
+.fight-stick .a.pressed {
+    display: none;
+}
+
+.fight-stick .b {
+    top: var(--b-top);
+    left: var(--b-left);
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="150" height="150" viewBox="0 0 150 150"><circle cx="75" cy="75" r="70" fill="rgb(229, 229, 229)" /><text x="50%" y="50%" font-family="Source Code Pro, monospace" font-weight="600" font-size="60" text-anchor="middle" fill="rgb(221, 32, 32)" dy=".3em">A</text></svg>');
+}
+
+.fight-stick .b.pressed {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="150" height="150" viewBox="0 0 150 150"><circle cx="75" cy="75" r="70" fill="rgb(221, 32, 32)" /><text x="50%" y="50%" font-family="Source Code Pro, monospace" font-weight="600" font-size="60" text-anchor="middle" fill="rgb(229, 229, 229)" dy=".3em">A</text></svg>');
+}
+
+.fight-stick .x {
+    top: var(--a-top);
+    left: var(--a-left);
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="150" height="150" viewBox="0 0 150 150"><circle cx="75" cy="75" r="70" fill="rgb(229, 229, 229)" /><text x="50%" y="50%" font-family="Source Code Pro, monospace" font-weight="600" font-size="60" text-anchor="middle" fill="rgb(221, 32, 32)" dy=".3em">B</text></svg>');
+}
+
+.fight-stick .x.pressed {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="150" height="150" viewBox="0 0 150 150"><circle cx="75" cy="75" r="70" fill="rgb(221, 32, 32)" /><text x="50%" y="50%" font-family="Source Code Pro, monospace" font-weight="600" font-size="60" text-anchor="middle" fill="rgb(229, 229, 229)" dy=".3em">B</text></svg>');
+}
+
+.fight-stick .y {
+    display: none;
+}
+
+.fight-stick .y.pressed {
+    display: none;
+}
+
+.fight-stick .button.pressed {
+    transform: translateY(0px);
+    -webkit-filter: invert(0);
+}
+
+/* Bumpers */
+
+.fight-stick .bumper {
+    width: 150px;
+    height: 150px;
+}
+
+.fight-stick .bumper.right {
+    display: none;
+}
+
+.fight-stick .bumper.right.pressed {
+    display: none;
+}
+
+.fight-stick .bumper.left {
+    display: none;
+}
+
+.fight-stick .bumper.left.pressed {
+    display: none;
+}
+
+.fight-stick .bumper.pressed {
+    transform: translateY(0px);
+    -webkit-filter: invert(0);
+}
+
+/* Triggers */
+
+.fight-stick .trigger-button {
+    width: 150px;
+    height: 150px;
+}
+
+.fight-stick .trigger-button.right {
+    display: none;
+}
+
+.fight-stick .trigger-button.right.pressed {
+    display: none;
+}
+
+.fight-stick .trigger-button.left {
+    display: none;
+}
+
+.fight-stick .trigger-button.left.pressed {
+    display: none;
+}
+
+.fight-stick .trigger-button {
+    background: #333333;
+}
+
+.fight-stick .trigger-button.pressed {
+    transform: translateY(0px);
+    -webkit-filter: invert(0);
+}
+
+/* L3/R3 */
+
+.fight-stick .quadrant {
+    display: none;
+}
+
+/* Stick */
+
+.fight-stick .fstick {
+    position: absolute;
+    left: 50px;
+    top: 150px;
+    width: 220px;
+    height: 220px;
+    background: var(--fstick-source-image);
+}
+
+.fight-stick .fstick.up {
+    background-position-x: 100%;
+}
+
+.fight-stick .fstick.down {
+    background-position-x: calc(4 * 100% / 8);
+}
+
+.fight-stick .fstick.left {
+    background-position-x: calc(6 * 100% / 8);
+}
+
+.fight-stick .fstick.right {
+    background-position-x: calc(2 * 100% / 8);
+}
+
+.fight-stick .fstick.up.right {
+    background-position-x: calc(100% / 8);
+}
+
+.fight-stick .fstick.up.left {
+    background-position-x: calc(7 * 100% / 8);
+}
+
+.fight-stick .fstick.down.right {
+    background-position-x: calc(3 * 100% / 8);
+}
+
+.fight-stick .fstick.down.left {
+    background-position-x: calc(5 * 100% / 8);
+}
