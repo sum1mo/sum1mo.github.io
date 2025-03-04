@@ -112,6 +112,8 @@ body { background-color: rgba(0, 0, 0, 0); margin: 0px auto; overflow: hidden; }
 .fight-stick .button {
     width: 150px;
     height: 150px;
+    background: none;
+    filter: hue-rotate(3deg) saturate(1.3) brightness(0.95);
 }
 
 .fight-stick .abxy {
