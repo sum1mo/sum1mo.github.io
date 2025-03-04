@@ -130,21 +130,21 @@ body { background-color: rgba(0, 0, 0, 0); margin: 0px auto; overflow: hidden; }
 .fight-stick .b {
     top: var(--b-top);
     left: var(--b-left);
-    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="150" height="150" viewBox="0 0 150 150"><circle cx="75" cy="75" r="70" fill="%232e353f" stroke="rgb(229, 229, 229)" stroke-width="7" /><text x="50%" y="50%" font-family="Source Code Pro, monospace" font-weight="600" font-size="60" text-anchor="middle" fill="%23ac070d" dy=".3em">A</text></svg>');
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="150" height="150" viewBox="0 0 150 150"><circle cx="75" cy="75" r="70" fill="%232e353f" stroke="rgb(229, 229, 229)" stroke-width="7" /><text x="50%" y="50%" font-family="Source Code Pro, monospace" font-weight="600" font-size="66" text-anchor="middle" fill="%23ac070d" dy=".3em">I</text></svg>');
 }
 
 .fight-stick .b.pressed {
-    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="150" height="150" viewBox="0 0 150 150"><circle cx="75" cy="75" r="70" fill="%23ac070d" stroke="%232e353f" stroke-width="7" /><text x="50%" y="50%" font-family="Source Code Pro, monospace" font-weight="600" font-size="60" text-anchor="middle" fill="rgb(229, 229, 229)" dy=".3em">A</text></svg>');
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="150" height="150" viewBox="0 0 150 150"><circle cx="75" cy="75" r="70" fill="%23ac070d" stroke="%232e353f" stroke-width="7" /><text x="50%" y="50%" font-family="Source Code Pro, monospace" font-weight="600" font-size="66" text-anchor="middle" fill="rgb(229, 229, 229)" dy=".3em">I</text></svg>');
 }
 
 .fight-stick .x {
     top: var(--a-top);
     left: var(--a-left);
-    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="150" height="150" viewBox="0 0 150 150"><circle cx="75" cy="75" r="70" fill="%232e353f" stroke="rgb(229, 229, 229)" stroke-width="7" /><text x="50%" y="50%" font-family="Source Code Pro, monospace" font-weight="600" font-size="60" text-anchor="middle" fill="%23ac070d" dy=".3em">B</text></svg>');
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="150" height="150" viewBox="0 0 150 150"><circle cx="75" cy="75" r="70" fill="%232e353f" stroke="rgb(229, 229, 229)" stroke-width="7" /><text x="50%" y="50%" font-family="Source Code Pro, monospace" font-weight="600" font-size="66" text-anchor="middle" fill="%23ac070d" dy=".3em">II</text></svg>');
 }
 
 .fight-stick .x.pressed {
-    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="150" height="150" viewBox="0 0 150 150"><circle cx="75" cy="75" r="70" fill="%23ac070d" stroke="%232e353f" stroke-width="7" /><text x="50%" y="50%" font-family="Source Code Pro, monospace" font-weight="600" font-size="60" text-anchor="middle" fill="rgb(229, 229, 229)" dy=".3em">B</text></svg>');
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="150" height="150" viewBox="0 0 150 150"><circle cx="75" cy="75" r="70" fill="%23ac070d" stroke="%232e353f" stroke-width="7" /><text x="50%" y="50%" font-family="Source Code Pro, monospace" font-weight="600" font-size="66" text-anchor="middle" fill="rgb(229, 229, 229)" dy=".3em">II</text></svg>');
 }
 
 .fight-stick .y {
