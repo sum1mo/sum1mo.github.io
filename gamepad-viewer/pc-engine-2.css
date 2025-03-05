@@ -40,8 +40,10 @@ body { background-color: rgba(0, 0, 0, 0); margin: 0px auto; overflow: hidden; }
 
 .controller.fight-stick {
     background: transparent;
-    height: 535px;
-    width: 575px;
+    background-color: rgba(46,53,63,0.5);
+    border-radius: 60px;
+    height: 450px;
+    width: 800px;
 }
 
 .fight-stick.disconnected {
@@ -70,41 +72,19 @@ body { background-color: rgba(0, 0, 0, 0); margin: 0px auto; overflow: hidden; }
 }
 
 .fight-stick .back {
-    background: 
-        url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="100" height="50" viewBox="0 0 100 50"%3E%3Crect width="100" height="50" rx="25" fill="%232e353f" stroke="rgb(229, 229, 229)" stroke-width="7"/%3E%3Ctext x="50" y="25" text-anchor="middle" fill="%23ac070d" font-size="18" font-family="Source Code Pro, monospace" font-weight="700" dy="0.35em">SELECT</text>%3C/svg%3E') no-repeat center center;
-    background-size: cover;
-    position: absolute;
-    top: 70px;
-    left: 435px;
+    display: none;
 }
 
 .fight-stick .start {
-    background: 
-        url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="100" height="50" viewBox="0 0 100 50"%3E%3Crect width="100" height="50" rx="25" fill="%232e353f" stroke="rgb(229, 229, 229)" stroke-width="7"/%3E%3Ctext x="50" y="25" text-anchor="middle" fill="%23ac070d" font-size="18" font-family="Source Code Pro, monospace" font-weight="700" dy="0.35em">RUN</text>%3C/svg%3E') no-repeat center center;
-    background-size: cover;
-    position: absolute;
-    left: 500px;
-    top: 70px;
-}
-
-.fight-stick .back.pressed, .fight-stick .start.pressed {
-    transform: translateY(0px);
-    background-position: 0px 100px;
-    -webkit-filter: brightness(100%) invert(0);
+    display: none;
 }
 
 .fight-stick .back.pressed {
-    background: 
-        url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="100" height="50" viewBox="0 0 100 50"%3E%3Crect width="100" height="50" rx="25" fill="%23ac070d" stroke="%232e353f" stroke-width="7"/%3E%3Ctext x="50" y="25" text-anchor="middle" fill="rgb(229, 229, 229)" font-size="18" font-family="Source Code Pro, monospace" font-weight="700" dy="0.35em">SELECT</text>%3C/svg%3E') no-repeat center center;
-    background-size: cover;
-    transform: rotate(-90deg);
+    display: none;
 }
 
 .fight-stick .start.pressed {
-    background: 
-        url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="100" height="50" viewBox="0 0 100 50"%3E%3Crect width="100" height="50" rx="25" fill="%23ac070d" stroke="%232e353f" stroke-width="7"/%3E%3Ctext x="50" y="25" text-anchor="middle" fill="rgb(229, 229, 229)" font-size="18" font-family="Source Code Pro, monospace" font-weight="700" dy="0.35em">RUN</text>%3C/svg%3E') no-repeat center center;
-    background-size: cover;
-    transform: rotate(-90deg);
+    display: none;
 }
 
 /* Face buttons */
@@ -128,8 +108,8 @@ body { background-color: rgba(0, 0, 0, 0); margin: 0px auto; overflow: hidden; }
 }
 
 .fight-stick .b {
-    top: var(--b-top);
-    left: var(--b-left);
+    top: 210px;
+    left: 280px;
     background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="150" height="150" viewBox="0 0 150 150"><circle cx="75" cy="75" r="70" fill="%232e353f" stroke="rgb(229, 229, 229)" stroke-width="7" /><text x="50%" y="50%" font-family="Source Code Pro, monospace" font-weight="600" font-size="66" text-anchor="middle" fill="%23ac070d" dy=".3em">I</text></svg>');
 }
 
@@ -138,8 +118,8 @@ body { background-color: rgba(0, 0, 0, 0); margin: 0px auto; overflow: hidden; }
 }
 
 .fight-stick .x {
-    top: var(--a-top);
-    left: var(--a-left);
+    top: 210px;
+    left: 100px;
     background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="150" height="150" viewBox="0 0 150 150"><circle cx="75" cy="75" r="70" fill="%232e353f" stroke="rgb(229, 229, 229)" stroke-width="7" /><text x="50%" y="50%" font-family="Source Code Pro, monospace" font-weight="600" font-size="66" text-anchor="middle" fill="%23ac070d" dy=".3em">II</text></svg>');
 }
 

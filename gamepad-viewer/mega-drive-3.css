@@ -40,8 +40,10 @@ body { background-color: rgba(0, 0, 0, 0); margin: 0px auto; overflow: hidden; }
 
 .controller.fight-stick {
     background: transparent;
-    height: 535px;
-    width: 575px;
+    background-color: rgba(58,58,57,0.3);
+    border-radius: 40px;
+    height: 450px;
+    width: 800px;
 }
 
 .fight-stick.disconnected {
@@ -73,17 +75,7 @@ body { background-color: rgba(0, 0, 0, 0); margin: 0px auto; overflow: hidden; }
 }
 
 .fight-stick .start {
-    background: 
-        url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="100" height="50" viewBox="0 0 100 50"%3E%3Crect width="100" height="50" rx="25" fill="rgb(192, 192, 192)" stroke="rgb(58,58,57)" stroke-width="7" /><text x="50" y="25" text-anchor="middle" fill="%23ae2048" font-size="18" font-family="Source Code Pro, monospace" font-weight="700" dy="0.35em">START</text></svg>') no-repeat center center;
-    background-size: cover;
-    position: absolute;
-    left: 113px;
-}
-
-.fight-stick .back.pressed, .fight-stick .start.pressed {
-    transform: translateY(0px);
-    background-position: 0px 100px;
-    -webkit-filter: brightness(100%) invert(0);
+    display: none;
 }
 
 .fight-stick .back.pressed {
@@ -91,9 +83,7 @@ body { background-color: rgba(0, 0, 0, 0); margin: 0px auto; overflow: hidden; }
 }
 
 .fight-stick .start.pressed {
-    background: 
-        url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="100" height="50" viewBox="0 0 100 50"%3E%3Crect width="100" height="50" rx="25" fill="%23ae2048" stroke="rgb(58,58,57)" stroke-width="7" /><text x="50" y="25" text-anchor="middle" fill="rgb(192, 192, 192)" font-size="18" font-family="Source Code Pro, monospace" font-weight="700" dy="0.35em">START</text></svg>') no-repeat center center;
-    background-size: cover;
+    display: none;
 }
 
 /* Face buttons */
@@ -113,7 +103,6 @@ body { background-color: rgba(0, 0, 0, 0); margin: 0px auto; overflow: hidden; }
     top: calc(var(--rt-top) + 140px);
     left: calc(var(--rt-left) - 35px);
     float: left;
-    background: #333333;
     background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="150" height="150" viewBox="0 0 150 150"><circle cx="75" cy="75" r="70" fill="rgb(192, 192, 192)" stroke="rgb(58,58,57)" stroke-width="7" /><text x="50%" y="50%" font-family="Source Code Pro, monospace" font-weight="600" font-size="66" text-anchor="middle" fill="%233441c4" dy=".3em">C</text></svg>');
 }
 
