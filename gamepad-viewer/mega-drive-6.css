@@ -72,12 +72,15 @@ body { background-color: rgba(0, 0, 0, 0); margin: 0px auto; overflow: hidden; }
 }
 
 .fight-stick .abxy {
-  left: 260px;
+    width: 310px;
+    height: 370px;
+    left: 260px;
+    top: 0px;
 }
 
 .fight-stick .a {
-    top: 280px;
-    left: 95px;
+    top: 168px;
+    left: 355px;
     background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="0 0 120 120"><circle cx="60" cy="60" r="55" fill="rgb(178 180 178)" stroke="rgb(84 88 90)" stroke-width="5" /><text x="50%" y="50%" font-family="Source Code Pro, monospace" font-weight="600" font-size="60" text-anchor="middle" fill="rgb(193 18 28)" dy=".3em">C</text></svg>');
 }
 
@@ -86,7 +89,7 @@ body { background-color: rgba(0, 0, 0, 0); margin: 0px auto; overflow: hidden; }
 }
 
 .fight-stick .b {
-    top: 240px;
+    top: 167px;
     left: 220px;
     background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="0 0 120 120"><circle cx="60" cy="60" r="55" fill="rgb(178 180 178)" stroke="rgb(84 88 90)" stroke-width="5" /><text x="50%" y="50%" font-family="Source Code Pro, monospace" font-weight="600" font-size="60" text-anchor="middle" fill="rgb(247 186 11)" dy=".3em">B</text></svg>');
 }
@@ -96,8 +99,8 @@ body { background-color: rgba(0, 0, 0, 0); margin: 0px auto; overflow: hidden; }
 }
 
 .fight-stick .x {
-    top: 150px;
-    left: 120px;
+    top: 203px;
+    left: 95px;
     background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="0 0 120 120"><circle cx="60" cy="60" r="55" fill="rgb(178 180 178)" stroke="rgb(84 88 90)" stroke-width="5" /><text x="50%" y="50%" font-family="Source Code Pro, monospace" font-weight="600" font-size="60" text-anchor="middle" fill="rgb(0 56 123)" dy=".3em">A</text></svg>');
 }
 
@@ -106,7 +109,7 @@ body { background-color: rgba(0, 0, 0, 0); margin: 0px auto; overflow: hidden; }
 }
 
 .fight-stick .y {
-    top: 110px;
+    top: 37px;
     left: 250px;
     background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="0 0 120 120"><circle cx="60" cy="60" r="55" fill="rgb(178 180 178)" stroke="rgb(84 88 90)" stroke-width="5" /><text x="50%" y="50%" font-family="Source Code Pro, monospace" font-weight="600" font-size="60" text-anchor="middle" fill="rgb(0 114 67)" dy=".3em">Y</text></svg>');
 }
@@ -123,6 +126,9 @@ body { background-color: rgba(0, 0, 0, 0); margin: 0px auto; overflow: hidden; }
 /* Bumpers */
 
 .fight-stick .bumpers {
+    width: 310px;
+    height: 370px;
+    left: 260px;
     top: 0px;
 }
 
@@ -135,23 +141,23 @@ body { background-color: rgba(0, 0, 0, 0); margin: 0px auto; overflow: hidden; }
 .fight-stick .bumper.right {
     position: absolute;
     top: 37px;
-    left: 140px;
-    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="0 0 120 120"><circle cx="60" cy="60" r="55" fill="rgb(178 180 178)" stroke="rgb(84 88 90)" stroke-width="5" /><text x="50%" y="50%" font-family="Source Code Pro, monospace" font-weight="600" font-size="60" text-anchor="middle" fill="rgb(81 70 137)" dy=".3em">X</text></svg>');
+    left: 385px;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="0 0 120 120"><circle cx="60" cy="60" r="55" fill="rgb(178 180 178)" stroke="rgb(84 88 90)" stroke-width="5" /><text x="50%" y="50%" font-family="Source Code Pro, monospace" font-weight="600" font-size="60" text-anchor="middle" fill="rgb(81 70 137)" dy=".3em">Z</text></svg>');
 }
 
 .fight-stick .bumper.right.pressed {
-    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="0 0 120 120"><circle cx="60" cy="60" r="55" fill="rgb(167 164 224)" stroke="rgb(84 88 90)" stroke-width="5" /><text x="50%" y="50%" font-family="Source Code Pro, monospace" font-weight="600" font-size="60" text-anchor="middle" fill="rgb(84 88 90)" dy=".3em">X</text></svg>'); 
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="0 0 120 120"><circle cx="60" cy="60" r="55" fill="rgb(167 164 224)" stroke="rgb(84 88 90)" stroke-width="5" /><text x="50%" y="50%" font-family="Source Code Pro, monospace" font-weight="600" font-size="60" text-anchor="middle" fill="rgb(84 88 90)" dy=".3em">Z</text></svg>'); 
 }
 
 .fight-stick .bumper.left {
     position: absolute;
-    top: 168px;
-    left: 110px;
-    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="0 0 120 120"><circle cx="60" cy="60" r="55" fill="rgb(178 180 178)" stroke="rgb(84 88 90)" stroke-width="5" /><text x="50%" y="50%" font-family="Source Code Pro, monospace" font-weight="600" font-size="60" text-anchor="middle" fill="rgb(81 70 137)" dy=".3em">Z</text></svg>');
+    top: 77px;
+    left: 120px;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="0 0 120 120"><circle cx="60" cy="60" r="55" fill="rgb(178 180 178)" stroke="rgb(84 88 90)" stroke-width="5" /><text x="50%" y="50%" font-family="Source Code Pro, monospace" font-weight="600" font-size="60" text-anchor="middle" fill="rgb(81 70 137)" dy=".3em">X</text></svg>');
 }
 
 .fight-stick .bumper.left.pressed {
-    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="0 0 120 120"><circle cx="60" cy="60" r="55" fill="rgb(167 164 224)" stroke="rgb(84 88 90)" stroke-width="5" /><text x="50%" y="50%" font-family="Source Code Pro, monospace" font-weight="600" font-size="60" text-anchor="middle" fill="rgb(84 88 90)" dy=".3em">Z</text></svg>'); 
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="0 0 120 120"><circle cx="60" cy="60" r="55" fill="rgb(167 164 224)" stroke="rgb(84 88 90)" stroke-width="5" /><text x="50%" y="50%" font-family="Source Code Pro, monospace" font-weight="600" font-size="60" text-anchor="middle" fill="rgb(84 88 90)" dy=".3em">X</text></svg>'); 
 }
 
 .fight-stick .bumper.pressed {
