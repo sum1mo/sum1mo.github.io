@@ -1,0 +1,239 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
+
+body { background-color: rgba(0, 0, 0, 0); margin: 0px auto; overflow: hidden; }
+
+:root {
+    --fstick-source-image: url(https://imgur.com/Cdxibvo.png);
+
+    --a-top: 230px;
+    --b-top: calc(var(--a-top) - var(--diag-vert-clearance));
+    --x-top: calc(var(--a-top) - var(--vert-clearance));
+    --y-top: calc(var(--x-top) - var(--diag-vert-clearance));
+    --rb-top: var(--y-top);
+    --lb-top: var(--rb-top);
+    --rt-top: calc(var(--rb-top) - 183px + var(--vert-clearance));
+    --lt-top: var(--rt-top);
+
+    --a-left: 0px;
+    --b-left: calc(var(--a-left) + var(--diag-horz-clearance));
+    --x-left: var(--a-left);
+    --y-left: calc(var(--a-left) + var(--diag-horz-clearance));
+    --rb-left: calc(var(--y-left) + var(--horz-clearance));
+    --lb-left: calc(var(--rb-left) + var(--horz-clearance));
+    --rt-left: calc(var(--rb-left) + 31px);
+    --lt-left: calc(var(--rt-left) + var(--horz-clearance));
+
+    --dir-right-top: calc(var(--x-top) + 62px + 75px);
+    --dir-right-left: calc(var(--x-left) + 472px - 150px);
+    --dir-down-top: calc(var(--dir-right-top) - var(--diag-vert-clearance));
+    --dir-down-left: calc(var(--dir-right-left) - var(--diag-horz-clearance));
+    --dir-left-top: var(--dir-down-top);
+    --dir-left-left: calc(var(--dir-down-left) - var(--horz-clearance));
+    --dir-up-top: calc(var(--dir-right-top) + 230px);
+    --dir-up-left: calc(var(--dir-right-left) + 75px);
+
+    --vert-clearance: 160px;
+    --diag-vert-clearance: 80px;
+    --diag-horz-clearance: 140px;
+    --horz-clearance: var(--vert-clearance);
+}
+
+.controller.fight-stick {
+    background: transparent;
+    background-color: rgba(58,58,57,0.3);
+    border-radius: 40px;
+    height: 400px;
+    width: 800px;
+}
+
+.fight-stick.disconnected {
+    margin:auto;
+    width:50%;
+    height:50%;
+    background: url(https://imgur.com/oDdTc1t.png) no-repeat;
+}
+
+/* start/back */
+
+.fight-stick .back {
+    display: none;
+}
+
+.fight-stick .start {
+    display: none;
+}
+
+/* Face buttons */
+
+.fight-stick .button {
+    width: 120px;
+    height: 120px;
+    background: none;
+}
+
+.fight-stick .abxy {
+    width: 310px;
+    height: 370px;
+    left: 260px;
+    top: 0px;
+}
+
+.fight-stick .a {
+    top: 37px;
+    left: 250px;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="0 0 120 120"><circle cx="60" cy="60" r="55" fill="rgb(178 180 178)" stroke="rgb(84 88 90)" stroke-width="5" /><text x="50%" y="50%" font-family="Source Code Pro, monospace" font-weight="600" font-size="60" text-anchor="middle" fill="rgb(0 56 123)" dy=".3em">V</text></svg>');
+}
+
+.fight-stick .a.pressed {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="0 0 120 120"><circle cx="60" cy="60" r="55" fill="rgb(0 56 123)" stroke="rgb(84 88 90)" stroke-width="5" /><text x="50%" y="50%" font-family="Source Code Pro, monospace" font-weight="600" font-size="60" text-anchor="middle" fill="rgb(178 180 178)" dy=".3em">V</text></svg>');
+}
+
+.fight-stick .x {
+    top: 167px;
+    left: 220px;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="0 0 120 120"><circle cx="60" cy="60" r="55" fill="rgb(178 180 178)" stroke="rgb(84 88 90)" stroke-width="5" /><text x="50%" y="50%" font-family="Source Code Pro, monospace" font-weight="600" font-size="60" text-anchor="middle" fill="rgb(247 186 11)" dy=".3em">II</text></svg>');
+}
+
+.fight-stick .x.pressed {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="0 0 120 120"><circle cx="60" cy="60" r="55" fill="rgb(247 186 11)" stroke="rgb(84 88 90)" stroke-width="5" /><text x="50%" y="50%" font-family="Source Code Pro, monospace" font-weight="600" font-size="60" text-anchor="middle" fill="rgb(84 88 90)" dy=".3em">II</text></svg>');
+}
+
+.fight-stick .b {
+    top: 168px;
+    left: 355px;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="0 0 120 120"><circle cx="60" cy="60" r="55" fill="rgb(178 180 178)" stroke="rgb(84 88 90)" stroke-width="5" /><text x="50%" y="50%" font-family="Source Code Pro, monospace" font-weight="600" font-size="60" text-anchor="middle" fill="rgb(193 18 28)" dy=".3em">I</text></svg>');
+}
+
+.fight-stick .b.pressed {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="0 0 120 120"><circle cx="60" cy="60" r="55" fill="rgb(193 18 28)" stroke="rgb(84 88 90)" stroke-width="5" /><text x="50%" y="50%" font-family="Source Code Pro, monospace" font-weight="600" font-size="60" text-anchor="middle" fill="rgb(178 180 178)" dy=".3em">I</text></svg>');
+}
+
+.fight-stick .y {
+    top: 203px;
+    left: 95px;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="0 0 120 120"><circle cx="60" cy="60" r="55" fill="rgb(178 180 178)" stroke="rgb(84 88 90)" stroke-width="5" /><text x="50%" y="50%" font-family="Source Code Pro, monospace" font-weight="600" font-size="60" text-anchor="middle" fill="rgb(0 114 67)" dy=".3em">III</text></svg>');
+}
+
+.fight-stick .y.pressed {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="0 0 120 120"><circle cx="60" cy="60" r="55" fill="rgb(0 114 67)" stroke="rgb(84 88 90)" stroke-width="5" /><text x="50%" y="50%" font-family="Source Code Pro, monospace" font-weight="600" font-size="60" text-anchor="middle" fill="rgb(178 180 178)" dy=".3em">III</text></svg>');
+}
+
+.fight-stick .button.pressed {
+    transform: translateY(0px);
+    -webkit-filter: invert(0);
+}
+
+/* Bumpers */
+
+.fight-stick .bumpers {
+    width: 310px;
+    height: 370px;
+    left: 260px;
+    top: 0px;
+}
+
+.fight-stick .bumper {
+    width: 120px;
+    height: 120px;
+    background: none;
+}
+
+.fight-stick .bumper.right {
+    position: absolute;
+    top: 37px;
+    left: 385px;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="0 0 120 120"><circle cx="60" cy="60" r="55" fill="rgb(178 180 178)" stroke="rgb(84 88 90)" stroke-width="5" /><text x="50%" y="50%" font-family="Source Code Pro, monospace" font-weight="600" font-size="60" text-anchor="middle" fill="rgb(81 70 137)" dy=".3em">VI</text></svg>');
+}
+
+.fight-stick .bumper.right.pressed {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="0 0 120 120"><circle cx="60" cy="60" r="55" fill="rgb(167 164 224)" stroke="rgb(84 88 90)" stroke-width="5" /><text x="50%" y="50%" font-family="Source Code Pro, monospace" font-weight="600" font-size="60" text-anchor="middle" fill="rgb(84 88 90)" dy=".3em">VI</text></svg>'); 
+}
+
+.fight-stick .bumper.left {
+    position: absolute;
+    top: 77px;
+    left: 120px;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="0 0 120 120"><circle cx="60" cy="60" r="55" fill="rgb(178 180 178)" stroke="rgb(84 88 90)" stroke-width="5" /><text x="50%" y="50%" font-family="Source Code Pro, monospace" font-weight="600" font-size="60" text-anchor="middle" fill="rgb(81 70 137)" dy=".3em">IV</text></svg>');
+}
+
+.fight-stick .bumper.left.pressed {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="0 0 120 120"><circle cx="60" cy="60" r="55" fill="rgb(167 164 224)" stroke="rgb(84 88 90)" stroke-width="5" /><text x="50%" y="50%" font-family="Source Code Pro, monospace" font-weight="600" font-size="60" text-anchor="middle" fill="rgb(84 88 90)" dy=".3em">IV</text></svg>'); 
+}
+
+.fight-stick .bumper.pressed {
+    transform: translateY(0px);
+    -webkit-filter: invert(0);
+}
+
+/* Triggers */
+
+.fight-stick .trigger-button {
+    display: none;
+}
+
+/* L3/R3 */
+
+.fight-stick .quadrant {
+    display: none;
+}
+
+/* Stick */
+
+.fight-stick .fstick {
+    position: absolute;
+    left: 0px;
+    top: 30px;
+    width: 350px;
+    height: 350px;
+    background: url(arcade/stick.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.fight-stick .fstick.up {
+    background: url(arcade/stick-up.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.fight-stick .fstick.down {
+    background: url(arcade/stick-down.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.fight-stick .fstick.left {
+    background: url(arcade/stick-left.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.fight-stick .fstick.right {
+    background: url(arcade/stick-right.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.fight-stick .fstick.up.right {
+    background: url(arcade/stick-up-right.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.fight-stick .fstick.up.left {
+    background: url(arcade/stick-up-left.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.fight-stick .fstick.down.right {
+    background: url(arcade/stick-down-right.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.fight-stick .fstick.down.left {
+    background: url(arcade/stick-down-left.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
